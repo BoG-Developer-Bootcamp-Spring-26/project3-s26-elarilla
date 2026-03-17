@@ -1,4 +1,4 @@
-# Project 2 - Animal Training App
+# Project 3 - Animal Training App
 
 ## Description
 
@@ -8,12 +8,12 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 
 ## Submission
 
-- **Due: TBA**
+- **Due: 4/9/26**
 
 ## Getting Started
 
-- Create **one** fork of this repository for your entire group, titled project2-f25-[groupname]
-- Set the owner of the repository to BoG-Dev-Bootcamp-F25
+- Create **one** fork of this repository for your entire group, titled project3-s26-[groupname]
+- Set the owner of the repository to BoG-Dev-Bootcamp-S26
 - Each group member should clone the repository locally, and run `npm install` in the project folder
 - A Next.js project has been provided here, please organize the project similar to the structure introduced in [Lecture 13](https://docs.google.com/presentation/d/1I-55ARz-_meRTOC1p7JvE-53YfZk1bluluav6spEIzo/edit#slide=id.g2986939648e_2_111)
 - Create a `.env` file in the root for all your environment variables
@@ -24,7 +24,7 @@ There are a lot of "bonuses" included in the specifications in this project. We 
 
 We will be incorporating all we have learned thus far such as CSS, components, hooks/state, conditional rendering, and routing! Here's a link to the **[Figma designs](https://www.figma.com/file/8nmpzRec6atkZMdXYXH0bW/AnimalTrainingApp?type=design&node-id=0%3A1&mode=design&t=v1XLulgKlPSI40S2-1)**. We recommend following the general organization of these designs, but feel free to have creative freedom in designing the frontend.
 
-**Tailwind CSS is required for the frontend.** We have already installed it with the boilerplate Next.js app, so it is ready to be used! If you need a short reminder of what it is, please reference [Lecture 2](https://docs.google.com/presentation/d/1NNFypM5SxF0BNhiNgBdpc588qY-rmivhZ8pvP7ifO7k/edit#slide=id.g2b497fbce1c_1_4) or the official [Tailwind Documentation](https://tailwindcss.com/docs/utility-first). Also the "Tailwind CSS IntelliSense" extenstion on VS Code is extremly helpful! Below is an example:
+**Tailwind CSS is required for the frontend.** We have already installed it with the boilerplate Next.js app, so it is ready to be used! If you need a short reminder of what it is, please reference [Lecture 2](https://docs.google.com/presentation/d/1NNFypM5SxF0BNhiNgBdpc588qY-rmivhZ8pvP7ifO7k/edit#slide=id.g2b497fbce1c_1_4) or the official [Tailwind Documentation](https://tailwindcss.com/docs/utility-first). Also the "Tailwind CSS IntelliSense" extension on VS Code is extremely helpful! Below is an example:
 
 ```tsx
 // Tailwind Styling
@@ -102,7 +102,7 @@ export default function Page() {
 - There is also a button that, when clicked, navigates to a form to create a training log that has inputs for title, description hours, and animal id only as the user id should already tracked with a hook and the date should just be the current date (for animal id you will have to manually input an animal id here).
   - If the creation is successful then it just goes back to the dashboard
   - If the creation is unsuccessful it stays on the form and notifies the user or the error
-- (Bonus) Include an option to edit existing training logs. This would involve navigating to a similar form as the training log creation form, except the form inputs are all prefilled with the current data
+- **(Bonus)** Include an option to edit existing training logs. This would involve navigating to a similar form as the training log creation form, except the form inputs are all prefilled with the current data
 
 ### Animals Dashboard
 
@@ -154,7 +154,7 @@ export default function Page() {
 ### Update Operations
 
 - Create a PATCH endpoint at `/api/animal` to update the `hoursTrained` of an animal whenever a new training log is made or updated
-- (Bonus) Create a PATCH endpoint at `/api/training` to edit the info of a training log. Make sure the user matches!
+- **(Bonus)** Create a PATCH endpoint at `/api/training` to edit the info of a training log. Make sure the user matches!
 - Note these requests will have a similar request body and response statuses:
   - Body: A JSON containing the animal/training log id for the animal/training log we want to edit along with the information we want to update
   - Response:
@@ -171,7 +171,7 @@ export default function Page() {
   - Response:
     - **Status 200 (Success):** If we are able to retrieve the users/animals/training logs
     - **Status 500**: For any other errors
-  - (Bonus) These three endpoints can implement pagination -- ideally using the document IDs or some other property that has natural ordering (i.e. take a look at approach 2 in this [article](https://www.codementor.io/@arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr))
+  - **(Bonus)** These three endpoints can implement pagination -- ideally using the document IDs or some other property that has natural ordering (i.e. take a look at approach 2 in this [article](https://www.codementor.io/@arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr))
 
 ### Verify User
 
@@ -190,8 +190,6 @@ export default function Page() {
 
 - Instead of tracking user info using a hook, incorporate JWT authentication and use cookies to track user information.
 
-### (Bonus) Pagination (Look at Read Operations)
+### (Bonus) Responsive Design
 
-### (Bonus) Search Bar
-
-### (Bonus) Edit Training Logs
+- We don't have mobile designs, but we will give extra credit if you make all of the pages of your application look good on different screen sizes (laptop, tablet, cell phone, etc). Obviously this is very subjective, so ask if you have any questions but it would be cool to see some websites looking good across multiple screen sizes!
